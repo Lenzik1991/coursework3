@@ -36,6 +36,11 @@ def posts_one(post_pk):
         return render_template("post.html", post=post, comments=comments, number_of_comments=number_of_comments)
 
 
+@posts_blueprint.errorhandler(404)
+def post_error(e):
+    return "Такой пост не найден", 404
+
+
 @posts_blueprint.route('/search/')
 def posts_search():
 
@@ -55,4 +60,4 @@ def posts_search():
 def posts_by_user(username):
     posts = posts_dao.get_by_user(username)
     number_of_posts = len(posts)
-    return render_template("user-feed.html", posts=posts)
+    return render_template("user-feed.html", posts=posts, number_of_posts=number_of_posts)
