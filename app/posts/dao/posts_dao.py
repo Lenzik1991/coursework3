@@ -30,7 +30,7 @@ class PostsDAO:
         posts_by_user = []
 
         for post in posts:
-            if post["posts_name"] == user_name:
+            if post["poster_name"] == user_name:
                 posts_by_user.append(post)
         return posts_by_user
 
