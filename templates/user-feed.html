@@ -24,11 +24,9 @@
     </div>
   </header>
   <main class="container">
-
     {% if number_of_posts == 0 %}
       <p>Не получилось найти посты, попробуйте другого пользователя</p>
     {% endif %}
-
       <section class="items">
       {% for post in posts %}
       <div class="items__item item">
