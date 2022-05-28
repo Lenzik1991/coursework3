@@ -34,7 +34,7 @@
             <span class="item__username">{{ post.poster_name }}</span>
           </a>
         </div>
-        <a href="/users/{{ post.poster_name }}" class="item__post-link">
+        <a href="/posts/{{ post.pk }}" class="item__post-link">
           <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
         </a>
         <p class="item__descr">{{ post.content }}</p>
